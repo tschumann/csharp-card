@@ -1,6 +1,9 @@
 ﻿
-interface ICardPlayer
+namespace Card
 {
-    Card play();
-    void receive(Card card);
+    interface ICardPlayer
+    {
+        Card play();
+        void receive(Card card);
+    }
 }

@@ -1,25 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
 
-class Deck
+namespace Card
 {
-    private List<Card> deck;
-
-    public Deck()
+    class Deck
     {
-        this.deck = new List<Card>(54);
+        private List<Card> deck;
 
-        foreach (Card.Rank rank in Enum.GetValues(typeof(Card.Rank)))
+        public Deck()
         {
-            foreach (Card.Suit suit in Enum.GetValues(typeof(Card.Suit)))
+            this.deck = new List<Card>(54);
+
+            foreach (Card.Rank rank in Enum.GetValues(typeof(Card.Rank)))
             {
-                // TODO: deal with jokers
-                this.deck.Add(new Card(suit, rank));
+                foreach (Card.Suit suit in Enum.GetValues(typeof(Card.Suit)))
+                {
+                    // TODO: deal with jokers
+                    this.deck.Add(new Card(suit, rank));
+                }
             }
         }
-    }
 
-    public void shuffle()
-    {
+        public void shuffle()
+        {
+        }
     }
 }
