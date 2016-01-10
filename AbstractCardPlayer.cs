@@ -7,7 +7,7 @@ namespace Card
 {
     abstract class AbstractCardPlayer : ICardPlayer
     {
-        private List<Card> hand;
+        protected List<Card> hand;
 
         public AbstractCardPlayer()
         {
