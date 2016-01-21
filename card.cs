@@ -31,8 +31,8 @@ namespace Card
             JOKER,
         }
 
-        private Suit suit;
-        private Rank rank;
+        public readonly Suit suit;
+        public readonly Rank rank;
 
         public Card(Suit suit, Rank rank)
         {

@@ -14,11 +14,12 @@ namespace Card
             this.hand = new List<Card>();
         }
 
-        abstract public Card play();
-
         public void receive(Card card)
         {
             this.hand.Add(card);
         }
+
+        abstract public Card play();
+        abstract public Card swap(Card card);
     }
 }
