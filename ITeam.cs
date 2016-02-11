@@ -1,0 +1,7 @@
+﻿
+namespace Card
+{
+    interface ITeam
+    {
+    }
+}

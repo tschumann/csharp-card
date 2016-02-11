@@ -8,9 +8,9 @@ namespace Card
     {
         private List<Card> deck;
 
-        public Deck()
+        public Deck(bool hasJokers)
         {
-            this.deck = new List<Card>(54);
+            this.deck = new List<Card>(hasJokers ? 54 : 52);
 
             foreach( Card.Rank rank in Enum.GetValues(typeof(Card.Rank)) )
             {
@@ -19,10 +19,10 @@ namespace Card
                     Card.Suit[] jokerSuits = {Card.Suit.BLACK, Card.Suit.RED};
 
                     // if it's the joker rank or a joker suit
-                    if( rank == Card.Rank.JOKER || jokerSuits.Contains(suit) )
+                    if (rank == Card.Rank.JOKER || jokerSuits.Contains(suit))
                     {
-                        // if it's the joker and a joker suit
-                        if (rank == Card.Rank.JOKER && jokerSuits.Contains(suit))
+                        // if we want to add jokers and if it's the joker and a joker suit
+                        if (hasJokers && rank == Card.Rank.JOKER && jokerSuits.Contains(suit))
                         {
                             this.deck.Add(new Card(suit, rank));
                         }
