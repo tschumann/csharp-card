@@ -1,4 +1,5 @@
-﻿
+﻿using System;
+
 namespace Card
 {
     class Card : ICard
@@ -33,11 +34,18 @@ namespace Card
 
         public readonly Suit suit;
         public readonly Rank rank;
+        private IGame game;
 
-        public Card(Suit suit, Rank rank)
+        public Card(Suit suit, Rank rank, IGame game)
         {
+            if (game == null)
+            {
+                throw new Exception();
+            }
+
             this.suit = suit;
             this.rank = rank;
+            this.game = game;
         }
     }
 }
