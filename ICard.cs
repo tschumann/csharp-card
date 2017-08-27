@@ -1,7 +1,7 @@
 ﻿
 namespace Card
 {
-    interface ICard
+    public interface ICard
     {
     }
 }

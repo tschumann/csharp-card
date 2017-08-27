@@ -2,7 +2,7 @@
 
 namespace Card
 {
-    class Card : ICard
+    public class Card : ICard
     {
         public enum Suit
         {

@@ -1,7 +1,7 @@
 ﻿
 namespace Card
 {
-    interface ICardPlayer
+    public interface ICardPlayer
     {
         Card play();
         void receive(Card card);

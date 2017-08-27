@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Card
 {
-    abstract class AbstractCardPlayer : ICardPlayer
+    public abstract class AbstractCardPlayer : ICardPlayer
     {
         protected List<Card> hand;
         protected IGame game;

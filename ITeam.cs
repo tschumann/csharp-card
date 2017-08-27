@@ -1,7 +1,7 @@
 ﻿
 namespace Card
 {
-    interface ITeam
+    public interface ITeam
     {
     }
 }
